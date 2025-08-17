@@ -2,6 +2,7 @@ import { FC, useState } from 'react';
 //Components
 import './godaddyStyle.css';
 import GoDaddyNavBar from './GoDaddyNavBar.tsx';
+import SectionOne from './SectionOne.tsx';
 //Bootstrap
 import 'bootstrap/dist/css/bootstrap.css';
 import { Container } from 'react-bootstrap';
@@ -13,7 +14,7 @@ import { useSpring, animated } from '@react-spring/web';
 const GoDaddyPage: FC = () => {
     const [lang, setLang] = useState<string>('en');
 
-    const textProps = {
+    const textNavProps = {
         en: {
             navLink1: 'Domain Names',
             navLink2: 'Websites & Hosting',
@@ -38,10 +39,24 @@ const GoDaddyPage: FC = () => {
         }
     }
 
+    const textSecOneProps = {
+        en: {
+            textOne: 'Type the domain you want',
+            buttonOne: 'Search Domain',
+        },
+        ua: {
+            textOne: 'Введіть потрібний домен',
+            buttonOne: 'Пошук Домену',
+        }
+    }
+
     return (
         <Container className='p-0'>
             <GoDaddyNavBar 
-                textProps={textProps[lang]}
+                textProps={textNavProps[lang]}
+            />
+            <SectionOne 
+                textProps={textSecOneProps[lang]}
             />
         </Container>
     );
