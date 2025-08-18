@@ -3,3 +3,13 @@
 .cs-w-brend {
     width: 120px !important;
 }
+
+/*Images*/
+.cs-image {
+    height: 500px !important;
+}
+
+/*Background*/
+.cs-bg-one {
+    background-color: #D8EFEF !important;
+}

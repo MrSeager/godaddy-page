@@ -16,7 +16,7 @@ interface SectionOneProps {
 
 const SectionOne: FC<SectionOneProps> = ({ textProps }) => {
     return (
-        <Container className='d-flex flex-row gap-2'>
+        <Container className='d-flex flex-row gap-2 px-0'>
             <InputGroup >
                 <Form.Control
                     placeholder={textProps.textOne}

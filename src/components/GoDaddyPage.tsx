@@ -3,6 +3,7 @@ import { FC, useState } from 'react';
 import './godaddyStyle.css';
 import GoDaddyNavBar from './GoDaddyNavBar.tsx';
 import SectionOne from './SectionOne.tsx';
+import SectionTwo from './SectionTwo.tsx';
 //Bootstrap
 import 'bootstrap/dist/css/bootstrap.css';
 import { Container } from 'react-bootstrap';
@@ -50,13 +51,47 @@ const GoDaddyPage: FC = () => {
         }
     }
 
+    const textSecTwoProps = {
+        en: {
+            titleOne: 'Websites & Commerce',
+            titelTwo: 'Tools for all your business firsts.',
+            parOne: 'Website and store solutions for any small business.',
+            btnOne: 'Get Started',
+            btnTwo: 'Learn More',
+            parTwo: 'No credit card required**',
+            titleThree: 'Domain Names',
+            titleFour: 'Grab a .com for just $0.01*/1st yr',
+            parThree: '2-year purchase required*',
+            btnThree: 'Find Your Domain',
+            parFour: 'Transfer Your Domain',
+            parFive: 'Domains include free privacy protection forever*',
+        },
+        ua: {
+            titleOne: 'Вебсайти & Комерція',
+            titelTwo: 'Інструменти для всіх ваших бізнес-першорядів.',
+            parOne: 'Рішення для веб-сайтів та магазинів для будь-якого малого бізнесу.',
+            btnOne: 'Почати',
+            btnTwo: 'Дізнатися більше',
+            parTwo: 'Кредитна картка не потрібна**',
+            titleThree: 'Імена доменів',
+            titleFour: 'Отримайте домен .com лише за $0.01*/1-й рік',
+            parThree: 'Потрібна покупка на 2 роки*',
+            btnThree: 'Знайдіть Свій Домен',
+            parFour: 'Перенесіть Свій Домен',
+            parFive: 'Домени включають безкоштовний захист конфіденційності назавжди*',
+        }
+    }
+
     return (
-        <Container className='p-0'>
+        <Container className='p-0 d-flex flex-column aling-items-center gap-3'>
             <GoDaddyNavBar 
                 textProps={textNavProps[lang]}
             />
             <SectionOne 
                 textProps={textSecOneProps[lang]}
+            />
+            <SectionTwo 
+                textProps={textSecTwoProps[lang]}
             />
         </Container>
     );
