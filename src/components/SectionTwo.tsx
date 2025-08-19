@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 //Bootstrap
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 //Images
@@ -35,13 +35,13 @@ const SectionTwo: FC<SectionTwoProps> = ({ textProps }) => {
                 </Card>
             </Col>
             <Col lg={4} xs={12} className='pt-lg-0 pt-3'>
-                <Card className='border-0 cs-bg-one w-100 h-100 d-flex flex-column justify-content-center gap-2 px-3'>
-                    <Card.Title className='my-0 fs-6'>{textProps.titleThree}</Card.Title>
-                    <Card.Subtitle className='my-0 fs-3'>{textProps.titleFour}</Card.Subtitle>
-                    <Card.Text className='my-0'>{textProps.parThree}</Card.Text>
-                    <Button className='w-75'>{textProps.btnThree}</Button>
-                    <Card.Text className='my-0'>{textProps.parFour}</Card.Text>
-                    <Card.Text className='my-0 fs-6'>{textProps.parFive} <AiOutlineQuestionCircle /></Card.Text>
+                <Card className='border-0 py-5 cs-bg-one w-100 h-100 d-flex flex-column align-items-start justify-content-center gap-2 px-3'>
+                    <Card.Title className='my-0 fs-6 px-5'>{textProps.titleThree}</Card.Title>
+                    <Card.Subtitle className='my-0 fs-3 px-5'>{textProps.titleFour}</Card.Subtitle>
+                    <Card.Text className='my-0 px-5'>{textProps.parThree}</Card.Text>
+                    <Button className='mx-5 py-2 px-5'>{textProps.btnThree}</Button>
+                    <Card.Text className='my-0 px-5'>{textProps.parFour}</Card.Text>
+                    <Card.Text className='my-0 fs-6 px-5'>{textProps.parFive} <AiOutlineQuestionCircle /></Card.Text>
                 </Card>
             </Col>
             </Row>

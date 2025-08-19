@@ -1,4 +1,7 @@
 
+.cs-transition {
+    transition: .5s !important;
+}
 
 .cs-w-brend {
     width: 120px !important;
@@ -12,4 +15,10 @@
 /*Background*/
 .cs-bg-one {
     background-color: #D8EFEF !important;
+}
+
+/*Buttons*/
+.cs-btn:hover {
+    background-color: #6c757d !important;
+    color: white !important;
 }

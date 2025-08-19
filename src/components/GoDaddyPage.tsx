@@ -4,6 +4,7 @@ import './godaddyStyle.css';
 import GoDaddyNavBar from './GoDaddyNavBar.tsx';
 import SectionOne from './SectionOne.tsx';
 import SectionTwo from './SectionTwo.tsx';
+import SectionThree from './SectionThree.tsx';
 //Bootstrap
 import 'bootstrap/dist/css/bootstrap.css';
 import { Container } from 'react-bootstrap';
@@ -82,8 +83,35 @@ const GoDaddyPage: FC = () => {
         }
     }
 
+    const textSecThreeProps = {
+        en: {
+            btn_1_1: 'Domains',
+            btn_1_2: 'Email & Microsoft 365',
+            btn_2_1: 'SSL Security',
+            btn_2_2: 'Web Design Services',
+            btn_3_1: 'Websites',
+            btn_3_2: 'Online Store',
+            btn_4_1: 'WorldPress',
+            btn_4_2: 'Web Hosting',
+            btn_5_1: 'Sale! $0.99*/1st yr.',
+            btn_5_2: 'Attract shoppers. Sell more stuff.',
+        },
+        ua: {
+            btn_1_1: 'Domains',
+            btn_1_2: 'Електронна пошта & Microsoft 365',
+            btn_2_1: 'Безпека SSL',
+            btn_2_2: 'Послуги Веб-Дизайну',
+            btn_3_1: 'Вебсайти',
+            btn_3_2: 'Інтернет-магазин',
+            btn_4_1: 'WorldPress',
+            btn_4_2: 'Веб-хостинг',
+            btn_5_1: 'Розпродаж! $0.99*/1-й рік.',
+            btn_5_2: 'Залучайте покупців. Продавайте більше товарів.',
+        }
+    }
+
     return (
-        <Container className='p-0 d-flex flex-column aling-items-center gap-3'>
+        <Container className='px-0 pb-5 d-flex flex-column aling-items-center gap-3'>
             <GoDaddyNavBar 
                 textProps={textNavProps[lang]}
             />
@@ -92,6 +120,9 @@ const GoDaddyPage: FC = () => {
             />
             <SectionTwo 
                 textProps={textSecTwoProps[lang]}
+            />
+            <SectionThree 
+                textProps={textSecThreeProps[lang]}
             />
         </Container>
     );
