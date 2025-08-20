@@ -30,7 +30,7 @@ const SectionThree: FC<SectionThreeProps> = ({ textProps }) => {
                 <Button className='p-3 text-secondary rounded-0 bg-transparent border-secondary-subtle cs-transition cs-btn'>{textProps.btn_4_2}</Button>
             </ButtonGroup>
             <Button className='p-3 text-secondary rounded-0 bg-transparent border-secondary-subtle cs-transition cs-btn'>
-                <span className='fs-2'>.shop</span><br />
+                <span className='fs-2 fw-bold'>.shop</span><br />
                 {textProps.btn_5_1}<br />
                 {textProps.btn_5_2}
             </Button>

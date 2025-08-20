@@ -22,9 +22,9 @@ const SectionTwo: FC<SectionTwoProps> = ({ textProps }) => {
             <Col lg={8} xs={12}>
                 <Card className='border-0 bg-transparent'>
                     <Card.Img src={BGImg} alt='bg' className='cs-image' />
-                    <Card.ImgOverlay className='mx-4 d-flex flex-column justify-content-center gap-0'>
+                    <Card.ImgOverlay className='mx-lg-5 mx-1 d-flex flex-column justify-content-center gap-0'>
                         <Card.Title className='fs-6 my-0'>{textProps.titleOne}</Card.Title>
-                        <Card.Subtitle className='display-2 fw-bold w-75 my-0'>{textProps.titelTwo}</Card.Subtitle>
+                        <Card.Subtitle className='display-2 fw-bold my-0'>{textProps.titelTwo}</Card.Subtitle>
                         <Card.Text className='m-0'>{textProps.parOne}</Card.Text>
                         <Container className='mt-2 d-flex gap-2 px-0'>
                             <Button>{textProps.btnOne}</Button>
@@ -35,13 +35,13 @@ const SectionTwo: FC<SectionTwoProps> = ({ textProps }) => {
                 </Card>
             </Col>
             <Col lg={4} xs={12} className='pt-lg-0 pt-3'>
-                <Card className='border-0 py-5 cs-bg-one w-100 h-100 d-flex flex-column align-items-start justify-content-center gap-2 px-3'>
-                    <Card.Title className='my-0 fs-6 px-5'>{textProps.titleThree}</Card.Title>
-                    <Card.Subtitle className='my-0 fs-3 px-5'>{textProps.titleFour}</Card.Subtitle>
-                    <Card.Text className='my-0 px-5'>{textProps.parThree}</Card.Text>
-                    <Button className='mx-5 py-2 px-5'>{textProps.btnThree}</Button>
-                    <Card.Text className='my-0 px-5'>{textProps.parFour}</Card.Text>
-                    <Card.Text className='my-0 fs-6 px-5'>{textProps.parFive} <AiOutlineQuestionCircle /></Card.Text>
+                <Card className='border-0 py-5 px-lg-5 px-1 cs-bg-one w-100 h-100 d-flex flex-column align-items-start justify-content-center gap-2 px-3'>
+                    <Card.Title className='my-0 fs-6'>{textProps.titleThree}</Card.Title>
+                    <Card.Subtitle className='my-0 fs-3'>{textProps.titleFour}</Card.Subtitle>
+                    <Card.Text className='my-0'>{textProps.parThree}</Card.Text>
+                    <Button className='py-2'>{textProps.btnThree}</Button>
+                    <Card.Text className='my-0'>{textProps.parFour}</Card.Text>
+                    <Card.Text className='my-0 fs-6'>{textProps.parFive} <AiOutlineQuestionCircle /></Card.Text>
                 </Card>
             </Col>
             </Row>

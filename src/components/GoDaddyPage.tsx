@@ -5,6 +5,7 @@ import GoDaddyNavBar from './GoDaddyNavBar.tsx';
 import SectionOne from './SectionOne.tsx';
 import SectionTwo from './SectionTwo.tsx';
 import SectionThree from './SectionThree.tsx';
+import SectionFour from './SectionFour.tsx';
 //Bootstrap
 import 'bootstrap/dist/css/bootstrap.css';
 import { Container } from 'react-bootstrap';
@@ -110,6 +111,53 @@ const GoDaddyPage: FC = () => {
         }
     }
 
+    const textSecFourProps = {
+        en: {
+            secFir: {
+                titleOne: 'Sell online with a website',
+                parOne: 'Sell anything, from physical products to downloads and services.',
+                btnOne: 'Get Started',
+                btnTwo: 'Learn More',
+            },
+            secSec: {
+                titleOne: 'Success in 3 easy steps.',
+                titleTwo: 'Save with the lowest fees',
+                parOne: '2.3% + 0¢ per in-person transaction.',
+                parTwo: '2.3% + 30¢ per online transaction.',
+                parThree: 'Enjoy the lowest transaction fees compared to other leading providers.',
+                btnOne: 'Start Getting Paid',
+                btnTwo: 'Learn More',
+            },
+            secThr: {
+                titleOne: 'Sell in-person and on the go',
+                parOne: "Our new Point of Sale devices are designed to fit any business and budget. Choose the one that's right for you.",
+                btnOne: 'Learn More',
+            },
+        },
+        ua: {
+            secFir: {
+                titleOne: 'Продавайте онлайн за допомогою веб-сайту',
+                parOne: 'Продавайте будь-що, від фізичних товарів до завантажень та послуг.',
+                btnOne: 'Почати',
+                btnTwo: 'Дізнатися Більше',
+            },
+            secSec: {
+                titleOne: 'Успіх у 3 простих кроки.',
+                titleTwo: 'Заощаджуйте з найнижчими комісіями',
+                parOne: '2,3% + 0¢ за кожну транзакцію, здійснену особисто.',
+                parTwo: '2,3% + 30¢ за онлайн-транзакцію.',
+                parThree: 'Насолоджуйтесь найнижчими комісіями за транзакції порівняно з іншими провідними постачальниками.',
+                btnOne: 'Почніть Отримувати Оплату',
+                btnTwo: 'Дізнатися Більше',
+            },
+            secThr: {
+                titleOne: 'Продавайте особисто та на ходу',
+                parOne: "Наші нові пристрої для точок продажу розроблені для будь-якого бізнесу та бюджету. Оберіть той, який підходить саме вам.",
+                btnOne: 'Дізнатися Більше',
+            },
+        }
+    }
+
     return (
         <Container className='px-0 pb-5 d-flex flex-column aling-items-center gap-3'>
             <GoDaddyNavBar 
@@ -123,6 +171,9 @@ const GoDaddyPage: FC = () => {
             />
             <SectionThree 
                 textProps={textSecThreeProps[lang]}
+            />
+            <SectionFour
+                textProps={textSecFourProps[lang]}
             />
         </Container>
     );
