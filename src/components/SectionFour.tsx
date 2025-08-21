@@ -22,7 +22,7 @@ const SectionFour: FC<SectionFourProps> = ({ textProps }) => {
             <Row className='mx-lg-5 mx-0'>
                 <Col lg={6} xs={12} className='d-flex flex-column gap-5'>
                     <h1 className='w-50 mb-lg-5 mb-0'>{textProps.secSec.titleOne}</h1>
-                    <Container className='d-flex flex-column px-0 mt-lg-5 mt-0 pt-lg-5 pt-0'>
+                    <Container className='d-flex flex-column px-0 my-auto'>
                         <Image 
                             src={ImgTwo} 
                             alt='image' 

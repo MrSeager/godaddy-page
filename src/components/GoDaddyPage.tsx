@@ -6,6 +6,7 @@ import SectionOne from './SectionOne.tsx';
 import SectionTwo from './SectionTwo.tsx';
 import SectionThree from './SectionThree.tsx';
 import SectionFour from './SectionFour.tsx';
+import SectionFive from './SectionFive.tsx';
 //Bootstrap
 import 'bootstrap/dist/css/bootstrap.css';
 import { Container } from 'react-bootstrap';
@@ -158,8 +159,21 @@ const GoDaddyPage: FC = () => {
         }
     }
 
+    const textSecFiveProps = {
+        en: {
+            title: 'Templates designed to sell.',
+            par: 'Choose from 100s of designs for every idea and industry.',
+            btn: 'Browse All Templates',
+        },
+        ua: {
+            title: 'Шаблони, розроблені для продажу.',
+            par: 'Оберіть із сотень дизайнів для кожної ідеї та галузі.',
+            btn: 'Переглянути Всі Шаблони',
+        }
+    }
+
     return (
-        <Container className='px-0 pb-5 d-flex flex-column aling-items-center gap-3'>
+        <Container fluid className='px-0 d-flex flex-column aling-items-center gap-3'>
             <GoDaddyNavBar 
                 textProps={textNavProps[lang]}
             />
@@ -174,6 +188,9 @@ const GoDaddyPage: FC = () => {
             />
             <SectionFour
                 textProps={textSecFourProps[lang]}
+            />
+            <SectionFive
+                textProps={textSecFiveProps[lang]}
             />
         </Container>
     );
