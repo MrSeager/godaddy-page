@@ -16,18 +16,18 @@ interface SectionFiveProps {
     textProps: SecFiveTextProps,
 }
 
-const SectionFive: FC<SectionFiveProps> = ({ textProps}) => {
+const SectionFive: FC<SectionFiveProps> = ({ textProps }) => {
     return (
-        <Container fluid className='bg-light'>
+        <Container fluid className='bg-light mt-5'>
             <Container className='text-center py-5 d-flex flex-column align-items-center'>
                 <h2>{textProps.title}</h2>
                 <p>{textProps.par}</p>
                 <Container className='d-flex gap-3 overflow-auto'>
-                    <Image fluid src={ImgOne} alt='image' className='cs-image-h' />
-                    <Image fluid src={ImgTwo} alt='image' className='cs-image-h' />
-                    <Image fluid src={ImgThree} alt='image' className='cs-image-h' />
-                    <Image fluid src={ImgFour} alt='image' className='cs-image-h' />
-                    <Image fluid src={ImgFive} alt='image' className='cs-image-h' />
+                    <Image fluid src={ImgOne} alt='image' className='rounded rounded-3 cs-image-h' />
+                    <Image fluid src={ImgTwo} alt='image' className='rounded rounded-3 cs-image-h' />
+                    <Image fluid src={ImgThree} alt='image' className='rounded rounded-3 cs-image-h' />
+                    <Image fluid src={ImgFour} alt='image' className='rounded rounded-3 cs-image-h' />
+                    <Image fluid src={ImgFive} alt='image' className='rounded rounded-3 cs-image-h' />
                 </Container>
                 <Button className='px-4'>{textProps.btn}</Button>
             </Container>

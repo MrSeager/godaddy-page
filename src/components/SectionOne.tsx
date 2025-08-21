@@ -16,8 +16,8 @@ interface SectionOneProps {
 
 const SectionOne: FC<SectionOneProps> = ({ textProps }) => {
     return (
-        <Container className='d-flex flex-row gap-2 px-0'>
-            <InputGroup >
+        <Container className='d-flex flex-row gap-2 px-0 mt-3'>
+            <InputGroup>
                 <Form.Control
                     placeholder={textProps.textOne}
                     className='rounded-0'

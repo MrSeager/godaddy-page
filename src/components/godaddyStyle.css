@@ -6,8 +6,18 @@
 .cs-w-brend {
     width: 120px !important;
 }
+
+/*Images*/
 .cs-image-h {
     height: 250px !important;
+}
+
+.cs-image-h-sec {
+    height: 40px !important;
+}
+
+.cs-img {
+    filter: brightness(0) saturate(100%) invert(91%) sepia(90%) saturate(4%) hue-rotate(121deg) brightness(107%) contrast(100%) !important;
 }
 
 /*Images*/

@@ -17,7 +17,7 @@ interface SectionTwoProps {
 
 const SectionTwo: FC<SectionTwoProps> = ({ textProps }) => {
     return (
-        <Container className='px-0'>
+        <Container className='px-0 my-2'>
             <Row>
             <Col lg={8} xs={12}>
                 <Card className='border-0 bg-transparent'>
