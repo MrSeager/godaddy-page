@@ -8,6 +8,7 @@ import SectionThree from './SectionThree.tsx';
 import SectionFour from './SectionFour.tsx';
 import SectionFive from './SectionFive.tsx';
 import SectionSix from './SectionSix.tsx';
+import SectionFooter from './SectionFooter.tsx';
 //Bootstrap
 import 'bootstrap/dist/css/bootstrap.css';
 import { Container } from 'react-bootstrap';
@@ -190,6 +191,135 @@ const GoDaddyPage: FC = () => {
         },
     }
 
+    const textSecFooterProps = {
+        en: {
+            title_1: 'About GoDaddy',
+            buttons_1: [
+                'About Us',
+                'Newsroom',
+                'Investor Relations',
+                'Careers',
+                'Corporate Responsibility',
+                'Trust Center',
+                'Legal'
+            ],
+
+            title_2: 'Help Center',
+            buttons_2: [
+                'Help Center',
+                'Community',
+                'Venture Forward: Microbusiness Data',
+                'GoDaddy Blog',
+                'Contact Us',
+                'Report Abuse',
+                'Resources'
+            ],
+
+            title_3: 'Resources',
+            buttons_3: [
+                'Webmail',
+                'WHOIS',
+                'GoDaddy Mobile App',
+                'ICANN Confirmation',
+                'Designers & Developers',
+                'Corporate Domains',
+                'Redeem Code',
+                'Product Catalog',
+                'Videos',
+                'Business Name Generator'
+            ],
+
+            title_4: 'Partner Programs',
+            buttons_4: [
+                'Affiliates',
+                'Reseller Programs',
+                'GoDaddy Pro'
+            ],
+
+            title_5: 'Account',
+            buttons_5: [
+                'My Products',
+                'Renewals & Billing',
+                'Create Account'
+            ],
+
+            title_6: 'Shopping',
+            buttons_6: [
+                'Buy a Domain',
+                'Websites',
+                'WorldPress',
+                'Hosting',
+                'Web Security',
+                'Email & Office',
+                'Phone Numbers',
+                'Promos'
+            ],
+        },
+        ua: {
+            title_1: 'Про GoDaddy',
+            buttons_1: [
+                'Про нас',
+                'Новини',
+                'Відносини з інвесторами',
+                'Кар’єра',
+                'Корпоративна відповідальність',
+                'Центр довіри',
+                'Юридична інформація'
+            ],
+
+            title_2: 'Центр допомоги',
+            buttons_2: [
+                'Центр допомоги',
+                'Спільнота',
+                'Venture Forward: Дані про мікробізнес',
+                'Блог GoDaddy',
+                'Зв’язатися з нами',
+                'Повідомити про порушення',
+                'Ресурси'
+            ],
+
+            title_3: 'Ресурси',
+            buttons_3: [
+                'Вебпошта',
+                'WHOIS',
+                'Мобільний додаток GoDaddy',
+                'Підтвердження ICANN',
+                'Дизайнери та розробники',
+                'Корпоративні домени',
+                'Активувати код',
+                'Каталог продуктів',
+                'Відео',
+                'Генератор назв для бізнесу'
+            ],
+
+            title_4: 'Партнерські програми',
+            buttons_4: [
+                'Партнери',
+                'Програми реселлерів',
+                'GoDaddy Pro'
+            ],
+
+            title_5: 'Обліковий запис',
+            buttons_5: [
+                'Мої продукти',
+                'Оновлення та оплата',
+                'Створити обліковий запис'
+            ],
+
+            title_6: 'Покупки',
+            buttons_6: [
+                'Купити домен',
+                'Вебсайти',
+                'WordPress',
+                'Хостинг',
+                'Веббезпека',
+                'Електронна пошта та офіс',
+                'Номери телефонів',
+                'Акції'
+            ]
+        },
+    }
+
     return (
         <Container fluid className='px-0 d-flex flex-column aling-items-center'>
             <GoDaddyNavBar 
@@ -212,6 +342,9 @@ const GoDaddyPage: FC = () => {
             />
             <SectionSix 
                 textProps={textSecSixProps[lang]}
+            />
+            <SectionFooter 
+                textProps={textSecFooterProps[lang]}
             />
         </Container>
     );

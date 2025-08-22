@@ -35,3 +35,8 @@
     background-color: #6c757d !important;
     color: white !important;
 }
+
+/*Font*/
+.cs-fs-footer-btn {
+    font-size: 12px !important;
+}
