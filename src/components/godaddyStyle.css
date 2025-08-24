@@ -13,7 +13,11 @@
 }
 
 .cs-image-h-sec {
-    height: 40px !important;
+    max-height: 40px !important;
+}
+
+.cs-image-h-two-sec {
+    max-height: 30px !important;
 }
 
 .cs-img {
@@ -22,7 +26,7 @@
 
 /*Images*/
 .cs-image {
-    height: 500px !important;
+    max-height: 500px !important;
 }
 
 /*Background*/

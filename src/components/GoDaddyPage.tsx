@@ -9,6 +9,7 @@ import SectionFour from './SectionFour.tsx';
 import SectionFive from './SectionFive.tsx';
 import SectionSix from './SectionSix.tsx';
 import SectionFooter from './SectionFooter.tsx';
+import SectorFooterTwo from './SectorFooterTwo.tsx';
 //Bootstrap
 import 'bootstrap/dist/css/bootstrap.css';
 import { Container } from 'react-bootstrap';
@@ -18,7 +19,16 @@ import axios from 'axios';
 import { useSpring, animated } from '@react-spring/web';
 
 const GoDaddyPage: FC = () => {
-    const [lang, setLang] = useState<string>('en');
+    const [lang, setLang] = useState<string>(() => {
+        return localStorage.getItem('lang') || 'en';
+    });
+
+    const handleLangChange = (newLang: string) => {
+        setLang(newLang);
+        localStorage.setItem('lang', newLang);
+    };
+
+
 
     const textNavProps = {
         en: {
@@ -320,6 +330,29 @@ const GoDaddyPage: FC = () => {
         },
     }
 
+    const textSecFooterTwoProps = {
+        en: {
+            btnLang: 'United States - English',
+            parOne: 'Copyright © 1999 - 2025 GoDaddy Operating Company, LLC. All Rights Reserved. The GoDaddy word mark is a registered trademark of GoDaddy Operating Company, LLC in the US and other countries. The “GO” logo is a registered trademark of GoDaddy.com, LLC in the US.',
+            parTwo: 'Use of this Site is subject to express terms of use. By using this site, you signify that you agree to be bound by these Universal',
+            parLink: 'Terms of Service',
+            btnOne: 'Legal',
+            btnTwo: 'Privacy Policy',
+            btnThree: 'Cookies',
+            parThree: 'Do not sell my personal information',
+        },
+        ua: {
+            btnLang: 'Україна - Українська',
+            parOne: 'Авторське право © 1999–2025 GoDaddy Operating Company, LLC. Усі права захищено. Словесний знак GoDaddy є зареєстрованим товарним знаком GoDaddy Operating Company, LLC у США та інших країнах. Логотип «GO» є зареєстрованим товарним знаком GoDaddy.com, LLC у США.',
+            parTwo: 'Використання цього Сайту регулюється чітко визначеними умовами використання. Використовуючи цей сайт, ви підтверджуєте свою згоду з цими Універсальними умовами надання послуг.',
+            parLink: 'Умови надання послуг',
+            btnOne: 'Юридичні',
+            btnTwo: 'Політика Конфіденційності',
+            btnThree: 'Cookies',
+            parThree: 'Не продавайте мою особисту інформацію',
+        },
+    }
+
     return (
         <Container fluid className='px-0 d-flex flex-column aling-items-center'>
             <GoDaddyNavBar 
@@ -345,6 +378,11 @@ const GoDaddyPage: FC = () => {
             />
             <SectionFooter 
                 textProps={textSecFooterProps[lang]}
+            />
+            <SectorFooterTwo 
+                lang={lang}
+                setLang={handleLangChange}
+                textProps={textSecFooterTwoProps[lang]}
             />
         </Container>
     );
