@@ -354,7 +354,7 @@ const GoDaddyPage: FC = () => {
     }
 
     return (
-        <Container fluid className='px-0 d-flex flex-column aling-items-center'>
+        <Container fluid className='user-select-none px-0 d-flex flex-column aling-items-center'>
             <GoDaddyNavBar 
                 textProps={textNavProps[lang]}
             />

@@ -27,8 +27,20 @@ const SectionTwo: FC<SectionTwoProps> = ({ textProps }) => {
                         <Card.Subtitle className='display-2 fw-bold my-0'>{textProps.titelTwo}</Card.Subtitle>
                         <Card.Text className='m-0'>{textProps.parOne}</Card.Text>
                         <Container className='mt-2 d-flex gap-2 px-0'>
-                            <Button>{textProps.btnOne}</Button>
-                            <Button>{textProps.btnTwo}</Button>
+                            <Button 
+                                type='button'
+                                href='#'
+                                className='px-5 py-2 text-nowrap bg-black fw-semibold border-black cs-transition cs-main-btn' 
+                            >
+                                {textProps.btnOne}
+                            </Button>
+                            <Button
+                                type='button'
+                                href='#'
+                                className='fw-semibold py-2 text-nowrap border-0 bg-transparent text-secondary cs-transition cs-nav-btn'
+                            >
+                                {textProps.btnTwo}
+                            </Button>
                         </Container>
                         <Card.Text className='my-0'>{textProps.parTwo}</Card.Text>
                     </Card.ImgOverlay>
@@ -39,7 +51,13 @@ const SectionTwo: FC<SectionTwoProps> = ({ textProps }) => {
                     <Card.Title className='my-0 fs-6'>{textProps.titleThree}</Card.Title>
                     <Card.Subtitle className='my-0 fs-3'>{textProps.titleFour}</Card.Subtitle>
                     <Card.Text className='my-0'>{textProps.parThree}</Card.Text>
-                    <Button className='py-2'>{textProps.btnThree}</Button>
+                    <Button 
+                        type='button'
+                        href='#'
+                        className='px-5 py-2 text-nowrap bg-black fw-semibold border-black cs-transition cs-main-btn'
+                    >
+                        {textProps.btnThree}
+                    </Button>
                     <Card.Text className='my-0'>{textProps.parFour}</Card.Text>
                     <Card.Text className='my-0 fs-6'>{textProps.parFive} <AiOutlineQuestionCircle /></Card.Text>
                 </Card>
