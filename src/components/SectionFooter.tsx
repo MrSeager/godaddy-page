@@ -31,8 +31,10 @@ const SectionFooter: FC<SectionFooterProps> = ({ textProps }) => {
                         <ButtonGroup vertical>
                             {textProps.buttons_1.map((label, index) => (
                                 <Button
+                                    type='button'
+                                    href='#'
                                     key={index}
-                                    className='cs-fs-footer-btn text-white-50 px-0 text-start bg-transparent border-0 text-nowrap'
+                                    className='cs-fs-footer-btn text-white-50 px-0 text-start bg-transparent border-0 text-nowrap cs-transition cs-footer-link'
                                 >
                                     {label}
                                 </Button>
@@ -44,8 +46,10 @@ const SectionFooter: FC<SectionFooterProps> = ({ textProps }) => {
                         <ButtonGroup vertical>
                             {textProps.buttons_2.map((label, index) => (
                                 <Button
+                                    type='button'
+                                    href='#'
                                     key={index}
-                                    className='cs-fs-footer-btn text-white-50 px-0 text-start bg-transparent border-0 text-nowrap'
+                                    className='cs-fs-footer-btn text-white-50 px-0 text-start bg-transparent border-0 text-nowrap cs-transition cs-footer-link'
                                 >
                                     {label}
                                 </Button>
@@ -57,8 +61,10 @@ const SectionFooter: FC<SectionFooterProps> = ({ textProps }) => {
                         <ButtonGroup vertical>
                             {textProps.buttons_3.map((label, index) => (
                                 <Button
+                                    type='button'
+                                    href='#'
                                     key={index}
-                                    className='cs-fs-footer-btn text-white-50 px-0 text-start bg-transparent border-0 text-nowrap'
+                                    className='cs-fs-footer-btn text-white-50 px-0 text-start bg-transparent border-0 text-nowrap cs-transition cs-footer-link'
                                 >
                                     {label}
                                 </Button>
@@ -70,8 +76,10 @@ const SectionFooter: FC<SectionFooterProps> = ({ textProps }) => {
                         <ButtonGroup vertical>
                             {textProps.buttons_4.map((label, index) => (
                                 <Button
+                                    type='button'
+                                    href='#'
                                     key={index}
-                                    className='cs-fs-footer-btn text-white-50 px-0 text-start bg-transparent border-0 text-nowrap'
+                                    className='cs-fs-footer-btn text-white-50 px-0 text-start bg-transparent border-0 text-nowrap cs-transition cs-footer-link'
                                 >
                                     {label}
                                 </Button>
@@ -83,8 +91,10 @@ const SectionFooter: FC<SectionFooterProps> = ({ textProps }) => {
                         <ButtonGroup vertical>
                             {textProps.buttons_5.map((label, index) => (
                                 <Button
+                                    type='button'
+                                    href='#'
                                     key={index}
-                                    className='cs-fs-footer-btn text-white-50 px-0 text-start bg-transparent border-0 text-nowrap'
+                                    className='cs-fs-footer-btn text-white-50 px-0 text-start bg-transparent border-0 text-nowrap cs-transition cs-footer-link'
                                 >
                                     {label}
                                 </Button>
@@ -96,8 +106,10 @@ const SectionFooter: FC<SectionFooterProps> = ({ textProps }) => {
                         <ButtonGroup vertical>
                             {textProps.buttons_6.map((label, index) => (
                                 <Button
+                                    type='button'
+                                    href='#'
                                     key={index}
-                                    className='cs-fs-footer-btn text-white-50 px-0 text-start bg-transparent border-0 text-nowrap'
+                                    className='cs-fs-footer-btn text-white-50 px-0 text-start bg-transparent border-0 text-nowrap cs-transition cs-footer-link'
                                 >
                                     {label}
                                 </Button>

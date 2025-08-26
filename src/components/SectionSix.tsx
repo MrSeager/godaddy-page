@@ -24,11 +24,12 @@ const SectionSix: FC<SectionSixProps> = ({ textProps }) => {
                         <InputGroup>
                             <Form.Control
                                 placeholder={textProps.par}
-                                className='rounded-0'
+                                className='rounded-0 py-2 shadow-none bg-dark border-dark text-white cs-transition cs-fc-footer'
                             />
                             <Button 
                                 type='button'
-                                className='rounded-0 px-4'
+                                href='#'
+                                className='rounded-0 px-4 text-black text-nowrap bg-white fw-semibold border-white cs-transition cs-footer-btn'
                             >
                                 {textProps.btn}
                             </Button>
@@ -36,8 +37,12 @@ const SectionSix: FC<SectionSixProps> = ({ textProps }) => {
                     </Col>
                     <Col lg={6} xs={12} className='mt-lg-0 mt-3 ps-lg-3 ps-0 d-flex flex-column gap-2'>
                         <h3 className='h5 m-0 p-0'>{textProps.titleTwo}</h3>
-                        <Button className='px-0 border-0 bg-transparent d-flex align-items-center gap-3 fs-3'>
-                            <Image fluid src={LogoImg} alt='logo' className='cs-image-h-sec cs-img' />
+                        <Button
+                            type='button'
+                            href='#' 
+                            className='px-0 border-0 bg-transparent d-flex align-items-center gap-3 fs-3 cs-transition cs-footer-btn-2'
+                        >
+                            <Image fluid src={LogoImg} alt='logo' className='cs-image-h-sec cs-transition cs-img' />
                             {textProps.titleThree}
                             <HiArrowNarrowRight size={70} />
                         </Button>

@@ -53,6 +53,50 @@
     background-color: transparent !important;
 }
 
+.cs-footer-btn:hover {
+    color: white !important;
+    background-color: transparent !important;
+}
+
+.cs-footer-btn-2:hover {
+    color: rgb(128, 128, 128) !important;
+}
+
+.cs-footer-btn-2:hover .cs-img {
+    filter: brightness(0) saturate(100%) invert(51%) sepia(0%) saturate(301%) hue-rotate(180deg) brightness(99%) contrast(88%) !important;
+}
+
+.cs-footer-link:hover {
+    color: white !important;
+}
+
+/*Scrolling*/
+.cs-scroll {
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+  scrollbar-width: thin; /* Firefox-specific */
+  scrollbar-color: black transparent; /* Firefox: thumb and track colors */
+  padding-bottom: 10px; /* Optional: space for scrollbar */
+}
+
+/* Chrome, Edge, Safari */
+.cs-scroll::-webkit-scrollbar {
+  height: 10px; /* Horizontal scrollbar height */
+}
+
+.cs-scroll::-webkit-scrollbar-track {
+  background: transparent !important; /* Track color */
+  border-radius: 0px;
+}
+
+.cs-scroll::-webkit-scrollbar-thumb {
+  background: transparent; /* Thumb color */
+  border-radius: 10px;
+}
+
+.cs-scroll::-webkit-scrollbar-thumb:hover {
+  background: grey; /* Thumb hover color */
+}
+
 /*Font*/
 .cs-fs-footer-btn {
     font-size: 12px !important;
@@ -61,4 +105,12 @@
 /*Forms*/
 .cs-fc:hover, .cs-fc:focus {
     border-color: black !important;
+}
+
+.cs-fc-footer::placeholder {
+    color: grey !important;
+}
+
+.cs-fc-footer:hover, .cs-fc-footer:focus {
+    border-color: white !important;
 }
