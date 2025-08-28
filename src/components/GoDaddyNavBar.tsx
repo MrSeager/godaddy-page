@@ -24,7 +24,7 @@ interface GoDaddyNavBarProps {
 
 const GoDaddyNavBar: FC<GoDaddyNavBarProps> = ({ textProps }) => {
     return (
-        <Navbar sticky='top' expand='lg' className="bg-white">
+        <Navbar fixed='top' expand='lg' className="bg-white">
             <Container className='px-0'>
                 <Navbar.Brand className='cs-w-brend pt-0 me-1'>
                     <Image fluid src={LogoImg} alt='src' />

@@ -35,7 +35,7 @@ const SectionTwo: FC<SectionTwoProps> = ({ textProps }) => {
     const slideRight = useSlide(inView, 200, 0);
 
     return (
-        <Container ref={ref} className='overflow-hidden px-0 my-2'>
+        <Container ref={ref} className='px-0 my-2'>
             <Row>
                 <animated.div
                     onMouseEnter={() => setHoverLeft(true)}

@@ -1,10 +1,16 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
+//Components
+import { useSlide } from './anim.tsx';
 //Bootstrap
 import { Container, Image, Dropdown, ButtonGroup, Button, Row, Col } from 'react-bootstrap';
 //Images
 import LogoImg from '../images/godaddy.svg';
 //Icons
 import { FaFacebook, FaSquareInstagram, FaTwitter, FaYoutube } from "react-icons/fa6";
+//Intersection Observer
+import { useInView } from "react-intersection-observer";
+//Spring
+import { animated } from '@react-spring/web';
 
 interface SecFooterTwoTextProps {
     [key: string]: string,
@@ -17,11 +23,22 @@ interface SectionFooterTwoProps {
 }
 
 const SectorFooterTwo: FC<SectionFooterTwoProps> = ({ setLang, textProps }) => {
+    const { ref: ref0, inView: inView0 } = useInView({ threshold: 0, });
+    const { ref: ref1, inView: inView1 } = useInView({ threshold: 0, });
+    
+    const slideLeft0 = useSlide(inView0, -200);
+    const slideRigt0 = useSlide(inView0, 200);
+    const slideLeft1 = useSlide(inView1, -200);
+    const slideRigt1 = useSlide(inView1, 200);
+
     return (
         <Container fluid className='bg-black'>
-            <Container className='border-bottom pb-3'>
+            <Container ref={ref0} className='border-bottom pb-3'>
                 <Row>
-                    <Col lg={6} xs={12} className='d-flex gap-3 align-items-center justify-content-lg-start justify-content-center'>
+                    <animated.div 
+                        style={slideLeft0} 
+                        className='col-lg-6 col-12 d-flex gap-3 align-items-center justify-content-lg-start justify-content-center'
+                    >
                         <Image fluid src={LogoImg} alt='logo' className='cs-image-h-two-sec cs-img' />
                         <Dropdown drop='up-centered'>
                             <Dropdown.Toggle className='border-0 bg-transparent cs-transition cs-footer-btn-2'>
@@ -37,8 +54,11 @@ const SectorFooterTwo: FC<SectionFooterTwoProps> = ({ setLang, textProps }) => {
                                 </Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
-                    </Col>
-                    <Col lg={6} xs={12} className='d-flex align-items-center justify-content-lg-end justify-content-center'>
+                    </animated.div>
+                    <animated.div 
+                        style={slideRigt0} 
+                        className='col-lg-6 col-12 d-flex align-items-center justify-content-lg-end justify-content-center'
+                    >
                         <ButtonGroup size="lg">
                             <Button
                                 type='button'
@@ -69,12 +89,15 @@ const SectorFooterTwo: FC<SectionFooterTwoProps> = ({ setLang, textProps }) => {
                                 <FaYoutube size={30} />
                             </Button>
                         </ButtonGroup>
-                    </Col>
+                    </animated.div>
                 </Row>
             </Container>
-            <Container className='py-3 text-white'>
+            <Container ref={ref1} className='py-3 text-white'>
                 <Row>
-                    <Col lg={10} xs={12} className='d-flex flex-column gap-4'>
+                    <animated.div
+                        style={slideLeft1}
+                        className='col-lg-10 col-12 d-flex flex-column gap-4'
+                    >
                         <p className='cs-fs-footer-btn text-lg-start text-center'>{textProps.parOne}</p>
                         <p className='cs-fs-footer-btn text-lg-start text-center'>
                             {textProps.parTwo} 
@@ -87,8 +110,11 @@ const SectorFooterTwo: FC<SectionFooterTwoProps> = ({ setLang, textProps }) => {
                             </Button>
                             .
                         </p>
-                    </Col>
-                    <Col lg={2} xs={12} className='d-flex flex-column justify-content-between'>
+                    </animated.div>
+                    <animated.div 
+                        style={slideRigt1} 
+                        className='col-lg-2 col-12 d-flex flex-column justify-content-between'
+                    >
                         <ButtonGroup>
                             <Button 
                                 type='button'
@@ -113,7 +139,7 @@ const SectorFooterTwo: FC<SectionFooterTwoProps> = ({ setLang, textProps }) => {
                             </Button>
                         </ButtonGroup>
                         <p className='cs-fs-footer-btn mt-lg-0 mt-3 text-lg-start text-center'>{textProps.parThree}</p>
-                    </Col>
+                    </animated.div>
                 </Row>
             </Container>
         </Container>

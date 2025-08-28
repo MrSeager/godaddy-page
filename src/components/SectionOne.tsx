@@ -20,7 +20,6 @@ interface SectionOneProps {
 
 const SectionOne: FC<SectionOneProps> = ({ textProps }) => {
     const [hoverIG, setHoverIG] = useState<boolean>(false);
-    const [hoverBG, setHoverBG] = useState<boolean>(false);
     const { ref, inView } = useInView({
         threshold: 0,
     });
@@ -29,10 +28,9 @@ const SectionOne: FC<SectionOneProps> = ({ textProps }) => {
     const slideRight = useSlide(inView, 200, 0);
 
     const hoverAnimInputGroup = useHover(hoverIG, 1.03);
-    const hoverAnimButtonGroup = useHover(hoverBG, 1.03);
 
     return (
-        <Container ref={ref} className='overflow-hidden d-flex flex-lg-row flex-column gap-2 px-0 mt-3'>
+        <Container ref={ref} className='d-flex flex-lg-row flex-column gap-2 px-0 mt-3'>
             <animated.div 
                 onMouseEnter={() => setHoverIG(true)} 
                 onMouseLeave={() => setHoverIG(false)}
@@ -51,10 +49,8 @@ const SectionOne: FC<SectionOneProps> = ({ textProps }) => {
                     {textProps.buttonOne}
                 </Button>
             </animated.div>
-            <animated.div 
-                onMouseEnter={() => setHoverBG(true)} 
-                onMouseLeave={() => setHoverBG(false)}
-                style={{ ...slideRight, ...hoverAnimButtonGroup}} 
+            <animated.div
+                style={slideRight} 
                 className='btn-group'
             >
                 <Button 

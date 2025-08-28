@@ -37,6 +37,7 @@
 /*Buttons*/
 .cs-nav-btn:hover {
     color: black !important;
+    scale: 1.1 !important;
 }
 
 .dropstart .dropdown-toggle::before {
@@ -46,6 +47,7 @@
 .cs-btn:hover {
     background-color: #6c757d !important;
     color: white !important;
+    scale: 1.1 !important;
 }
 
 .cs-main-btn:hover {
@@ -68,6 +70,7 @@
 
 .cs-footer-link:hover {
     color: white !important;
+    scale: 1.1;
 }
 
 /*Scrolling*/

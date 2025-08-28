@@ -6,17 +6,23 @@ export const useHover = ( hover: boolean, scl: number ) =>
         config: { tension: 110, friction: 10 },
     });
 
-export const useScale = ( del: number ) =>
+export const useScale = ( onScreen: boolean ) =>
     useSpring({
-        from: { transform: 'scaleY(0)' },
-        to: { transform: 'scaleY(1)' },
-        config: { tension: 180, friction: 15 },
-        delay: del,
+        from: { opacity: 0, transform: 'scale(0)' },
+        to: { opacity: onScreen ? 1 : 0, transform: onScreen ? 'scale(1)' : 'scale(0)' },
+        config: { tension: 180, friction: 20 },
     });
 
-export const useSlide = ( onScreen: boolean, x: number, y: number ) => 
+export const useSlide = ( onScreen: boolean, x: number ) => 
     useSpring({
         from: { opacity: 0, transform: `translateX(${x}px)` },
         to : { opacity: onScreen ? 1 : 0, transform: onScreen ? 'translateX(0px)' : `translateX(${x}px)` },
         config: { tension: 180, friction: 20 },
     }); 
+
+export const useFade = ( onScreen: boolean ) => 
+    useSpring({
+        from: { opacity: 0 },
+        to: { opacity: onScreen ? 1 : 0 },
+        config: { tension: 180, friction: 20 },
+    });
