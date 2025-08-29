@@ -1,6 +1,12 @@
 import { FC } from 'react';
+//Components
+import { useSlideTilt } from './anim.tsx';
 //Bootstrap
-import { Container, Row, Col, Button, ButtonGroup } from 'react-bootstrap';
+import { Container, Row, Button, ButtonGroup } from 'react-bootstrap';
+//Intersection Observer
+import { useInView } from "react-intersection-observer";
+//Spring
+import { animated } from '@react-spring/web';
 
 interface SecFooterTextProps {
     title_1: string;
@@ -22,11 +28,25 @@ interface SectionFooterProps {
 }
 
 const SectionFooter: FC<SectionFooterProps> = ({ textProps }) => {
+    const { ref, inView } = useInView({
+        threshold: 0,
+    });
+
+    const slideTiltAnim0 = useSlideTilt( inView, -200, -100, 0);
+    const slideTiltAnim1 = useSlideTilt( inView, -200, -100, 50);
+    const slideTiltAnim2 = useSlideTilt( inView, -200, -100, 100);
+    const slideTiltAnim3 = useSlideTilt( inView, -200, -100, 150);
+    const slideTiltAnim4 = useSlideTilt( inView, -200, -100, 200);
+    const slideTiltAnim5 = useSlideTilt( inView, -200, -100, 250);
+
     return (
-        <Container fluid className='bg-black text-white py-5'>
+        <Container ref={ref} fluid className='bg-black text-white py-5'>
             <Container>
                 <Row>
-                    <Col lg={2} xs={12}>
+                    <animated.div 
+                        style={slideTiltAnim0}
+                        className='col-lg-2 col-12'
+                    >
                         <h4 className='h6'>{textProps.title_1}</h4>
                         <ButtonGroup vertical>
                             {textProps.buttons_1.map((label, index) => (
@@ -40,8 +60,11 @@ const SectionFooter: FC<SectionFooterProps> = ({ textProps }) => {
                                 </Button>
                             ))}
                         </ButtonGroup>
-                    </Col>
-                    <Col lg={2} xs={12}>
+                    </animated.div>
+                    <animated.div
+                        style={slideTiltAnim1} 
+                        className='col-lg-2 col-12'
+                    >
                         <h4 className='h6'>{textProps.title_2}</h4>
                         <ButtonGroup vertical>
                             {textProps.buttons_2.map((label, index) => (
@@ -55,8 +78,11 @@ const SectionFooter: FC<SectionFooterProps> = ({ textProps }) => {
                                 </Button>
                             ))}
                         </ButtonGroup>                    
-                    </Col>
-                    <Col lg={2} xs={12}>
+                    </animated.div>
+                    <animated.div
+                        style={slideTiltAnim2} 
+                        className='col-lg-2 col-12'
+                    >
                         <h4 className='h6'>{textProps.title_3}</h4>
                         <ButtonGroup vertical>
                             {textProps.buttons_3.map((label, index) => (
@@ -70,8 +96,11 @@ const SectionFooter: FC<SectionFooterProps> = ({ textProps }) => {
                                 </Button>
                             ))}
                         </ButtonGroup> 
-                    </Col>
-                    <Col lg={2} xs={12}>
+                    </animated.div>
+                    <animated.div
+                        style={slideTiltAnim3} 
+                        className='col-lg-2 col-12'
+                    >
                         <h4 className='h6'>{textProps.title_4}</h4>
                         <ButtonGroup vertical>
                             {textProps.buttons_4.map((label, index) => (
@@ -85,8 +114,11 @@ const SectionFooter: FC<SectionFooterProps> = ({ textProps }) => {
                                 </Button>
                             ))}
                         </ButtonGroup> 
-                    </Col>
-                    <Col lg={2} xs={12}>
+                    </animated.div>
+                    <animated.div
+                        style={slideTiltAnim4} 
+                        className='col-lg-2 col-12'
+                    >
                         <h4 className='h6'>{textProps.title_5}</h4>
                         <ButtonGroup vertical>
                             {textProps.buttons_5.map((label, index) => (
@@ -100,8 +132,11 @@ const SectionFooter: FC<SectionFooterProps> = ({ textProps }) => {
                                 </Button>
                             ))}
                         </ButtonGroup> 
-                    </Col>
-                    <Col lg={2} xs={12}>
+                    </animated.div>
+                    <animated.div
+                        style={slideTiltAnim5} 
+                        className='col-lg-2 col-12'
+                    >
                         <h4 className='h6'>{textProps.title_6}</h4>
                         <ButtonGroup vertical>
                             {textProps.buttons_6.map((label, index) => (
@@ -115,7 +150,7 @@ const SectionFooter: FC<SectionFooterProps> = ({ textProps }) => {
                                 </Button>
                             ))}
                         </ButtonGroup> 
-                    </Col>
+                    </animated.div>
                 </Row>
             </Container>
         </Container>

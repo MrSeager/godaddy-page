@@ -13,11 +13,12 @@ export const useScale = ( onScreen: boolean ) =>
         config: { tension: 180, friction: 20 },
     });
 
-export const useSlide = ( onScreen: boolean, x: number ) => 
+export const useSlide = ( onScreen: boolean, x: number, del: number = 0 ) => 
     useSpring({
         from: { opacity: 0, transform: `translateX(${x}px)` },
         to : { opacity: onScreen ? 1 : 0, transform: onScreen ? 'translateX(0px)' : `translateX(${x}px)` },
         config: { tension: 180, friction: 20 },
+        delay: del,
     }); 
 
 export const useFade = ( onScreen: boolean ) => 
@@ -25,4 +26,12 @@ export const useFade = ( onScreen: boolean ) =>
         from: { opacity: 0 },
         to: { opacity: onScreen ? 1 : 0 },
         config: { tension: 180, friction: 20 },
+    });
+
+export const useSlideTilt = ( onScreen: boolean, x: number, tiltX: number, del: number ) => 
+    useSpring({
+        from: { opacity: 0, transform: `translateX(${x}px) skewX(${tiltX}deg) rotateX(${tiltX}deg)`, },
+        to: { opacity: onScreen ? 1 : 0, transform: onScreen ? 'translateX(0px) skewX(0deg) rotateX(0deg)' : `translateX(${x}px) skewX(${tiltX}deg) rotateX(${tiltX}deg)` },
+        config: { tension: 180, friction: 20 },
+        delay: del,
     });

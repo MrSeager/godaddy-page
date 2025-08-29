@@ -25,8 +25,8 @@ const SectionSix: FC<SectionSixProps> = ({ textProps }) => {
         threshold: 0,
     });
 
-    const slideLeft = useSlide(inView, -200);
-    const slideRight = useSlide(inView, 200);
+    const slideLeft = useSlide(inView, -200, 0);
+    const slideRight = useSlide(inView, 200, 100);
 
     return (
         <Container fluid className='bg-black border-bottom text-white'>

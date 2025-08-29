@@ -25,7 +25,7 @@ const SectionOne: FC<SectionOneProps> = ({ textProps }) => {
     });
 
     const slideLeft = useSlide(inView, -200, 0);
-    const slideRight = useSlide(inView, 200, 0);
+    const slideRight = useSlide(inView, 200, 100);
 
     const hoverAnimInputGroup = useHover(hoverIG, 1.03);
 

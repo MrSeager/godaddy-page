@@ -31,7 +31,7 @@ const SectionTwo: FC<SectionTwoProps> = ({ textProps }) => {
     const hoverAnimLeft = useHover(hoverLeft, 1.01);
     const hoverAnimRight = useHover(hoverRight, 1.01);
 
-    const slideLeft = useSlide(inView, -200, 0);
+    const slideLeft = useSlide(inView, -200, 100);
     const slideRight = useSlide(inView, 200, 0);
 
     return (

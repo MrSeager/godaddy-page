@@ -26,10 +26,10 @@ const SectorFooterTwo: FC<SectionFooterTwoProps> = ({ setLang, textProps }) => {
     const { ref: ref0, inView: inView0 } = useInView({ threshold: 0, });
     const { ref: ref1, inView: inView1 } = useInView({ threshold: 0, });
     
-    const slideLeft0 = useSlide(inView0, -200);
-    const slideRigt0 = useSlide(inView0, 200);
-    const slideLeft1 = useSlide(inView1, -200);
-    const slideRigt1 = useSlide(inView1, 200);
+    const slideLeft0 = useSlide(inView0, -200, 0);
+    const slideRigt0 = useSlide(inView0, 200, 100);
+    const slideLeft1 = useSlide(inView1, -200, 100);
+    const slideRigt1 = useSlide(inView1, 200, 0);
 
     return (
         <Container fluid className='bg-black'>

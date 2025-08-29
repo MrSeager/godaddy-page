@@ -13,10 +13,6 @@ import SectorFooterTwo from './SectorFooterTwo.tsx';
 //Bootstrap
 import 'bootstrap/dist/css/bootstrap.css';
 import { Container } from 'react-bootstrap';
-//Axios
-import axios from 'axios';
-//Spring
-import { useSpring, animated } from '@react-spring/web';
 
 const GoDaddyPage: FC = () => {
     const [lang, setLang] = useState<string>(() => {
