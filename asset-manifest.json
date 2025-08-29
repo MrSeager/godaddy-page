@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/godaddy-page/static/css/main.ca27aab4.css",
+    "main.js": "/godaddy-page/static/js/main.a480a801.js",
+    "static/js/453.c3e57e32.chunk.js": "/godaddy-page/static/js/453.c3e57e32.chunk.js",
+    "static/media/pexels-karolina-grabowska-5632402.jpg": "/godaddy-page/static/media/pexels-karolina-grabowska-5632402.b4352ced6dceb1aa88a6.jpg",
+    "static/media/pexels-thngocbich-1714341.jpg": "/godaddy-page/static/media/pexels-thngocbich-1714341.ac2ee1429299496d19f7.jpg",
+    "static/media/pexels-pixabay-38519.jpg": "/godaddy-page/static/media/pexels-pixabay-38519.bb0eb15496a79a4685aa.jpg",
+    "static/media/pexels-ebahir-1173285862-29051442.jpg": "/godaddy-page/static/media/pexels-ebahir-1173285862-29051442.704323899df0744a3c20.jpg",
+    "static/media/pexels-designecologist-1779487.jpg": "/godaddy-page/static/media/pexels-designecologist-1779487.df2f8d4ab5463ad6441d.jpg",
+    "static/media/istockphoto-1061329208-1024x1024.jpg": "/godaddy-page/static/media/istockphoto-1061329208-1024x1024.c7cc38180b4640470f20.jpg",
+    "static/media/pexels-karolina-grabowska-5632382.jpg": "/godaddy-page/static/media/pexels-karolina-grabowska-5632382.40948e1b8f3a4ae39272.jpg",
+    "static/media/pexels-karolina-grabowska-5632379.jpg": "/godaddy-page/static/media/pexels-karolina-grabowska-5632379.452ab9a858c0eb61cafb.jpg",
+    "static/media/pexels-karolina-grabowska-5650020.jpg": "/godaddy-page/static/media/pexels-karolina-grabowska-5650020.e75da4e64d2fc6a05ef1.jpg",
+    "static/media/godaddy.svg": "/godaddy-page/static/media/godaddy.110251c6908c5e4f592f9aa670563fc1.svg",
+    "index.html": "/godaddy-page/index.html",
+    "main.ca27aab4.css.map": "/godaddy-page/static/css/main.ca27aab4.css.map",
+    "main.a480a801.js.map": "/godaddy-page/static/js/main.a480a801.js.map",
+    "453.c3e57e32.chunk.js.map": "/godaddy-page/static/js/453.c3e57e32.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ca27aab4.css",
+    "static/js/main.a480a801.js"
+  ]
+}
