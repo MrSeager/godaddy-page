@@ -73,8 +73,8 @@ const SectionFour: FC<SectionFourProps> = ({ textProps }) => {
                             alt='image' 
                             className='rounded rounded-3 mt-lg-5 mt-0'
                         />
-                        <p className='mt-5'>02</p>
-                        <h2>{textProps.secSec.titleTwo}</h2>
+                        <p className='mt-5 d-lg-inline d-none'>02</p>
+                        <h2 className='mt-lg-0 mt-3'>{textProps.secSec.titleTwo}</h2>
                         <p className='m-0'>{textProps.secSec.parOne}</p>
                         <p className='m-0'>{textProps.secSec.parTwo}</p>
                         <p className='m-0'>{textProps.secSec.parThree}</p>
@@ -109,8 +109,8 @@ const SectionFour: FC<SectionFourProps> = ({ textProps }) => {
                             alt='image' 
                             className='rounded rounded-3'
                         />
-                        <p className='mt-5'>01</p>
-                        <h2>{textProps.secFir.titleOne}</h2>
+                        <p className='mt-5 d-lg-inline d-none'>01</p>
+                        <h2 className='mt-lg-0 mt-3'>{textProps.secFir.titleOne}</h2>
                         <p className='m-0'>{textProps.secFir.parOne}</p>
                         <Container className='px-0 mt-3 d-flex gap-3'>
                             <Button 
@@ -141,8 +141,8 @@ const SectionFour: FC<SectionFourProps> = ({ textProps }) => {
                             alt='image' 
                             className='rounded rounded-3'
                         />
-                        <p className='mt-5'>03</p>
-                        <h2>{textProps.secThr.titleOne}</h2>
+                        <p className='mt-5 d-lg-inline d-none'>03</p>
+                        <h2 className='mt-lg-0 mt-3'>{textProps.secThr.titleOne}</h2>
                         <p className='m-0'>{textProps.secThr.parOne}</p>
                         <Container className='px-0 mt-3 d-flex gap-3'>
                             <Button 

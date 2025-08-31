@@ -51,7 +51,7 @@ const SectionOne: FC<SectionOneProps> = ({ textProps }) => {
             </animated.div>
             <animated.div
                 style={slideRight} 
-                className='btn-group'
+                className='btn-group cs-overflow-x'
             >
                 <Button 
                     type='button' 

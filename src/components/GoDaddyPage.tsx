@@ -10,6 +10,7 @@ import SectionFive from './SectionFive.tsx';
 import SectionSix from './SectionSix.tsx';
 import SectionFooter from './SectionFooter.tsx';
 import SectorFooterTwo from './SectorFooterTwo.tsx';
+import LinkPreview from './LinkPreview.tsx';
 //Bootstrap
 import 'bootstrap/dist/css/bootstrap.css';
 import { Container } from 'react-bootstrap';
@@ -380,6 +381,7 @@ const GoDaddyPage: FC = () => {
                 setLang={handleLangChange}
                 textProps={textSecFooterTwoProps[lang]}
             />
+            <LinkPreview />
         </Container>
     );
 }
