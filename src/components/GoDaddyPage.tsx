@@ -352,7 +352,6 @@ const GoDaddyPage: FC = () => {
 
     return (
         <Container fluid className='overflow-x-hidden pt-5 user-select-none px-0 d-flex flex-column aling-items-center'>
-            <LinkPreview />
             <GoDaddyNavBar 
                 textProps={textNavProps[lang]}
             />
